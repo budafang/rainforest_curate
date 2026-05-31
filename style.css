@@ -586,6 +586,16 @@ section { padding: 96px 0; }
 }
 .media-caption { font-size: 0.82rem; color: var(--text-sub); margin-top: 10px; text-align: center; }
 
+.video-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .video-row { grid-template-columns: 1fr; gap: 24px; }
+}
+
 .playlist-link {
   background: white;
   border-radius: var(--radius);
