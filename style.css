@@ -331,6 +331,41 @@ section { padding: 96px 0; }
 .award-name { font-weight: 600; font-size: 0.9rem; color: var(--text-main); margin-bottom: 4px; }
 .award-org { font-size: 0.78rem; color: var(--text-sub); }
 
+/* --- 7.5 CULTURE --- */
+#culture { background: #f5f9f4; }
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.culture-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  border-left: 4px solid var(--green-dark);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.culture-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.culture-icon { font-size: 2.2rem; margin-bottom: 16px; }
+.culture-card h3 { font-size: 1.15rem; color: var(--green-dark); margin-bottom: 12px; }
+.culture-card p { font-size: 0.9rem; color: var(--text-sub); line-height: 1.8; }
+
+.culture-videos { margin-top: 48px; }
+.culture-videos-title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--green-dark);
+  margin-bottom: 28px;
+}
+.culture-note {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
 /* --- 8. TIMELINE --- */
 #timeline { background: white; }
 
@@ -399,6 +434,15 @@ section { padding: 96px 0; }
   width: 100%; height: 140px;
   object-fit: cover; border-radius: 8px;
   margin-top: 12px;
+}
+.timeline-video {
+  position: relative; padding-bottom: 56.25%;
+  height: 0; overflow: hidden;
+  border-radius: 8px; margin-top: 12px;
+}
+.timeline-video iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; border: none;
 }
 .timeline-caption {
   font-size: 0.8rem; color: var(--amber); font-weight: 500;
