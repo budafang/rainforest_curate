@@ -586,6 +586,13 @@ section { padding: 96px 0; }
 .ex-section-body h3 { font-size: 1.05rem; color: var(--green-dark); margin-bottom: 8px; }
 .ex-section-body p { font-size: 0.88rem; color: var(--text-sub); line-height: 1.7; }
 
+.ex-section-tease {
+  border-style: dashed;
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(46,125,50,0.03) 10px, rgba(46,125,50,0.03) 20px);
+}
+.ex-section-tease .ex-section-num { opacity: 0.55; }
+.ex-section-tease h3 { color: var(--amber); }
+
 .exhibition-dates {
   background: linear-gradient(135deg, var(--green-dark) 0%, #33691e 100%);
   border-radius: var(--radius);
@@ -639,6 +646,28 @@ section { padding: 96px 0; }
 @media (max-width: 768px) {
   .video-row { grid-template-columns: 1fr; gap: 24px; }
 }
+
+.media-triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .media-triple { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .media-triple { grid-template-columns: 1fr; gap: 20px; }
+}
+
+.media-footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.media-footer .playlist-link { margin-bottom: 0; flex: 1; min-width: 280px; }
 
 .playlist-link {
   background: white;
